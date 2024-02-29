@@ -17,6 +17,9 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../src/styles/variables' as *;
+@use '../src/styles/mixins' as *;
+
 .content-container {
     background-color: #1C1C1C;
     color: white;

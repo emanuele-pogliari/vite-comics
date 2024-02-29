@@ -47,8 +47,11 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../src/styles/variables' as *;
+@use '../src/styles/mixins' as *;
+
 .ecommerce-container {
-    background-color: #0282F9;
+    background-color: $primaryColor;
     padding-top: 50px;
     padding-bottom: 50px;
 
@@ -59,6 +62,8 @@ export default {
         gap: 50px;
         justify-content: space-between;
         align-items: center;
+
+        padding: 0 45px;
 
         li {
             display: flex;

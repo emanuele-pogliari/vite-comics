@@ -83,6 +83,9 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../src/styles/variables' as *;
+@use '../src/styles/mixins' as *;
+
 .footer-container {
     background-color: #1c1c1c;
     color: white;

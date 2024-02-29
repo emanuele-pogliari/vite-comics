@@ -24,6 +24,9 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../src/styles/variables' as *;
+@use '../src/styles/mixins' as *;
+
 header {
     margin: auto;
 }
