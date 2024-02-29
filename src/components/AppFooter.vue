@@ -60,6 +60,7 @@ export default {
                     </div>
                 </div>
             </div>
+            <img class="logo-footer" src="../assets/img/dc-logo-bg.png" alt="">
         </div>
     </div>
     <div class="subfooter-container">
@@ -80,6 +81,7 @@ export default {
     background-size: cover;
 
     .footer {
+        position: relative;
         width: 70%;
         margin: auto;
 
@@ -103,13 +105,26 @@ export default {
                 }
             }
         }
+
+        .logo-footer {
+            position: absolute;
+            transform: scale(1.1);
+            top: -70px;
+            right: 0;
+            z-index: 1;
+        }
     }
+
+
 }
 
 .subfooter-container {
     margin: auto;
     padding: 30px 0;
     background-color: #1c1c1c;
+    position: relative;
+    z-index: 2;
+
 
     .sub-footer {
         width: 70%;

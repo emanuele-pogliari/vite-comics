@@ -1,6 +1,14 @@
 <script>
 export default {
     name: 'AppNav',
+
+    data() {
+        return {
+            links: ["Characters", "Comics", "Movies", "Tv", "Games", "Collectibles", "Videos", "Fans", "News", "Shop"],
+
+            activeLinkIndex: 1,
+        }
+    }
 }
 </script>
 
@@ -9,16 +17,7 @@ export default {
         <nav class="nav-container">
             <img class="img-logo" src="../assets/img/dc-logo.png" alt="">
             <ul class="nav-links">
-                <li>Characters</li>
-                <li>Comics</li>
-                <li>Movies</li>
-                <li>Tv</li>
-                <li>Games</li>
-                <li>Collectibles</li>
-                <li>Videos</li>
-                <li>Fans</li>
-                <li>News</li>
-                <li>Show</li>
+                <li v-for="link in links">{{ link }}</li>
             </ul>
         </nav>
     </header>
