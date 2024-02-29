@@ -15,7 +15,7 @@ export default {
 <template>
     <header>
         <nav class="nav-container">
-            <img class="img-logo" src="../assets/img/dc-logo.png" alt="">
+            <img class="img-logo" src="/img/dc-logo.png" alt="">
             <ul class="nav-links">
                 <li v-for="link in links">{{ link }}</li>
             </ul>

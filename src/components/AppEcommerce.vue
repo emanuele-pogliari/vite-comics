@@ -11,22 +11,22 @@ export default {
 
                 {
                     image: "/img/buy-comics-merchandise.png",
-                    name: "Digital Comics",
+                    name: "DC Merchandise",
                 },
 
                 {
                     image: "/img/buy-comics-subscriptions.png",
-                    name: "Digital Comics",
+                    name: "Subscription",
                 },
 
                 {
                     image: "/img/buy-comics-shop-locator.png",
-                    name: "Digital Comics",
+                    name: "Comic Shop Locator",
                 },
 
                 {
                     image: "/img/buy-dc-power-visa.svg",
-                    name: "Digital Comics",
+                    name: "DC Power Visa",
                 },
             ],
         }
@@ -49,6 +49,36 @@ export default {
 <style lang="scss">
 .ecommerce-container {
     background-color: #0282F9;
-    height: 200px
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    ul {
+        display: flex;
+        width: 70%;
+        margin: auto;
+        gap: 50px;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            display: flex;
+            align-items: center;
+            color: white;
+
+            gap: 20px;
+
+            img {
+                width: 50px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+
 }
 </style>

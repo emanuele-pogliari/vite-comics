@@ -3,12 +3,25 @@
 import AppEcommerce from './AppEcommerce.vue';
 
 export default {
+    data() {
+        return {
 
+            list1: ["Characters", "Comics", "Movies", "Tv", "Games", "Videos", "News"],
+
+            list2: ["Shop DC", "Shop DC Collectibles"],
+
+            list3: ["Terms of use", "Privacy policy(New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"],
+
+            list4: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
+
+        }
+    },
     components: {
         AppEcommerce,
     },
     name: 'AppFooter',
 }
+
 </script>
 
 <template>
@@ -18,57 +31,38 @@ export default {
             <div class="links">
                 <div class="links-first-col">
                     <div class="links-list">
-                        <h3>Dc Comics</h3>
+                        <h3>Dc comics</h3>
                         <ul>
-                            <li>Characters</li>
-                            <li>Comics</li>
-                            <li>Movies</li>
-                            <li>Tv</li>
-                            <li>Games</li>
-                            <li>Videos</li>
-                            <li>News</li>
+                            <li v-for="item of list1">{{ item }}</li>
                         </ul>
                     </div>
                     <div class="links-list">
                         <h3>Shop</h3>
                         <ul>
-                            <li>Shop DC</li>
-                            <li>Shop DC Collictibles</li>
+                            <li v-for="item of list2">{{ item }}</li>
                         </ul>
                     </div>
                 </div>
                 <div class="links-second-col">
                     <div class="links-list">
-                        <h3>Dc</h3>
+                        <h3>DC</h3>
                         <ul>
-                            <li>Terms of use</li>
-                            <li>Privacy policy (New)</li>
-                            <li>Ad Choices</li>
-                            <li>Advertising</li>
-                            <li>Jobs</li>
-                            <li>Subscriptions</li>
-                            <li>Talent Workshops</li>
-                            <li>CPSC Certificates</li>
-                            <li>Ratings</li>
-                            <li>Shop Help</li>
-                            <li>Contact Us</li>
+                            <li v-for="item of list3">{{ item }}</li>
                         </ul>
                     </div>
                 </div>
                 <div class="links-third-col">
                     <div class="links-list">
-                        <h3>Sites</h3>
+                        <h3>SITES</h3>
                         <ul>
-                            <li>DC</li>
-                            <li>MAD Magazine</li>
-                            <li>DC Kids</li>
-                            <li>DC Universe</li>
-                            <li>DC Power Visa</li>
+                            <li v-for="item of list4">
+                                {{ item }}</li>
+
                         </ul>
                     </div>
                 </div>
             </div>
-            <img class="logo-footer" src="../assets/img/dc-logo-bg.png" alt="">
+            <img class="logo-footer" src="/img/dc-logo-bg.png" alt="">
         </div>
     </div>
     <div class="subfooter-container">
@@ -85,8 +79,9 @@ export default {
     margin: auto;
     padding-top: 45px;
     padding-bottom: 60px;
-    background-image: url(../assets/img/footer-bg.jpg);
+    background-image: url(/img/footer-bg.jpg);
     background-size: cover;
+    overflow: hidden;
 
     .footer {
         position: relative;
@@ -109,7 +104,7 @@ export default {
 
                 li {
                     color: #959595;
-                    padding-bottom: 10px;
+                    padding-bottom: 5px;
                 }
             }
         }
@@ -119,10 +114,8 @@ export default {
             transform: scale(1.2);
             top: -70px;
             right: 0;
-            z-index: 1;
         }
     }
-
 
 }
 
@@ -131,8 +124,6 @@ export default {
     padding: 30px 0;
     background-color: #1c1c1c;
     position: relative;
-    z-index: 2;
-
 
     .sub-footer {
         width: 70%;
