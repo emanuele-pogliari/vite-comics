@@ -5,15 +5,18 @@ import AppEcommerce from './AppEcommerce.vue';
 export default {
     data() {
         return {
-
             list1: ["Characters", "Comics", "Movies", "Tv", "Games", "Videos", "News"],
-
             list2: ["Shop DC", "Shop DC Collectibles"],
-
             list3: ["Terms of use", "Privacy policy(New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"],
-
             list4: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
 
+            socialIcon: [
+                "/img/footer-facebook.png",
+                "/img/footer-twitter.png",
+                "/img/footer-youtube.png",
+                "/img/footer-pinterest.png",
+                "/img/footer-periscope.png"
+            ]
         }
     },
     components: {
@@ -68,6 +71,13 @@ export default {
     <div class="subfooter-container">
         <div class="sub-footer">
             <button class="signup-btn">Sign-up Now!</button>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="social">
+                    <img v-for="icon of socialIcon" :src="icon" alt="">
+
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -128,14 +138,35 @@ export default {
     .sub-footer {
         width: 70%;
         margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .signup-btn {
+            padding: 17px;
+            border: 2px solid #0282F9;
+            background-color: transparent;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .follow {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            h4 {
+                font-size: 20px;
+                color: #0282F9;
+                text-transform: uppercase;
+            }
+
+            .social {
+                display: flex;
+                gap: 15px
+            }
+        }
+
     }
 
-    .signup-btn {
-        padding: 17px;
-        border: 2px solid #0282F9;
-        background-color: transparent;
-        color: white;
-        text-transform: uppercase;
-    }
 }
 </style>

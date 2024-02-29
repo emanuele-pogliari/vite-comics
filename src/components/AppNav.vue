@@ -17,7 +17,7 @@ export default {
         <nav class="nav-container">
             <img class="img-logo" src="/img/dc-logo.png" alt="">
             <ul class="nav-links">
-                <li v-for="link in links">{{ link }}</li>
+                <li v-for="(link, index) in links" :class="index == activeLinkIndex ? 'active' : ''">{{ link }}</li>
             </ul>
         </nav>
     </header>
@@ -31,9 +31,9 @@ header {
 .nav-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 70%;
     margin: auto;
-    padding: 15px;
 
     .nav-links {
         display: flex;
@@ -42,6 +42,17 @@ header {
         list-style-type: none;
         gap: 20px;
         text-transform: uppercase;
+
+        li {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            &.active {
+                padding-bottom: 45px;
+                border-bottom: 5px solid #0282F9;
+
+            }
+        }
     }
 
     .img-logo {
