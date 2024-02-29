@@ -38,6 +38,7 @@ header {
 
     .nav-links {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         list-style-type: none;
         gap: 20px;
@@ -47,6 +48,5 @@ header {
     .img-logo {
         width: 80px;
     }
-
 }
 </style>
