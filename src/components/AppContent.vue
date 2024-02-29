@@ -1,0 +1,26 @@
+<script>
+export default {
+    name: 'AppContent',
+}
+</script>
+
+<template>
+    <div class="content-container">
+        <div class="content"> -> Content goes here </div>
+    </div>
+</template>
+
+<style lang="scss">
+.content-container {
+    background-color: #1C1C1C;
+    color: white;
+
+    .content {
+        width: 70%;
+        margin: auto;
+        padding-top: 55px;
+        padding-bottom: 45px;
+        font-size: 28px;
+    }
+}
+</style>
