@@ -1,10 +1,18 @@
 <script>
+
+import AppEcommerce from './AppEcommerce.vue';
+
 export default {
+
+    components: {
+        AppEcommerce,
+    },
     name: 'AppFooter',
 }
 </script>
 
 <template>
+    <AppEcommerce></AppEcommerce>
     <div class="footer-container">
         <div class="footer">
             <div class="links">
@@ -108,7 +116,7 @@ export default {
 
         .logo-footer {
             position: absolute;
-            transform: scale(1.1);
+            transform: scale(1.2);
             top: -70px;
             right: 0;
             z-index: 1;

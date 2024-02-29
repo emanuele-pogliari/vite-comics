@@ -1,6 +1,36 @@
 <script>
+
 export default {
-    name: 'AppEcommerce',
+    data() {
+        return {
+            items: [
+                {
+                    image: "/img/buy-comics-digital-comics.png",
+                    name: "Digital Comics",
+                },
+
+                {
+                    image: "/img/buy-comics-merchandise.png",
+                    name: "Digital Comics",
+                },
+
+                {
+                    image: "/img/buy-comics-subscriptions.png",
+                    name: "Digital Comics",
+                },
+
+                {
+                    image: "/img/buy-comics-shop-locator.png",
+                    name: "Digital Comics",
+                },
+
+                {
+                    image: "/img/buy-dc-power-visa.svg",
+                    name: "Digital Comics",
+                },
+            ],
+        }
+    }
 }
 
 </script>
@@ -8,7 +38,10 @@ export default {
 <template>
     <div class="ecommerce-container">
         <ul>
-            <li></li>
+            <li v-for="item in items">
+                <img :src="item.image">
+                <p>{{ item.name }}</p>
+            </li>
         </ul>
     </div>
 </template>
