@@ -85,7 +85,6 @@ export default {
                 },
             ]
 
-
         }
     },
 }
@@ -93,7 +92,8 @@ export default {
 
 <template>
     <div class="content-container">
-        <div>
+        <div class="content">
+            <ComicItem v-for="currentComic in comics" :thumb="currentComic.series" :image="currentComic.thumb"></ComicItem>
         </div>
     </div>
 </template>
@@ -112,6 +112,10 @@ export default {
         padding-top: 55px;
         padding-bottom: 45px;
         font-size: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px 25px;
     }
 }
 </style>
