@@ -111,7 +111,6 @@ footer {
             @include flex-container;
             align-items: center;
             height: 100%;
-            padding: 20px 0;
         }
 
         .links {
