@@ -151,7 +151,7 @@ export default {
     .content {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         gap: 50px 25px;
 
         width: 70%;
