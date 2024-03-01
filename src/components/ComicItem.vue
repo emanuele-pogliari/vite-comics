@@ -26,6 +26,7 @@ export default {
         width: 185px;
         height: 185px;
         object-fit: cover;
+        object-position: top;
     }
 
     h4 {

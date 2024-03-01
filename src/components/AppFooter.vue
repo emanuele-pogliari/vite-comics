@@ -143,10 +143,12 @@ footer {
 }
 
 .subfooter-container {
+    position: relative;
+
     margin: auto;
     padding: 30px 0;
+
     background-color: #303030;
-    position: relative;
 
     .sub-footer {
         // this mixin will give display flex, justify-content: center and width 70% properties to the container
@@ -154,6 +156,7 @@ footer {
 
         .signup-btn {
             padding: 17px;
+
             border: 2px solid $primaryColor;
             background-color: transparent;
             color: white;

@@ -51,9 +51,10 @@ export default {
 @use '../src/styles/mixins' as *;
 
 .ecommerce-container {
-    background-color: $primaryColor;
-    padding-top: 50px;
     padding-bottom: 50px;
+    padding-top: 50px;
+
+    background-color: $primaryColor;
 
     ul {
         // this mixin will give display flex, justify-content: center and width 70% properties to the container
@@ -61,14 +62,16 @@ export default {
         @include flex-container;
         gap: 50px;
         align-items: center;
+
         padding: 0 45px;
 
         li {
             display: flex;
             align-items: center;
+            gap: 20px;
+
             color: white;
 
-            gap: 20px;
 
             img {
                 width: 50px;
