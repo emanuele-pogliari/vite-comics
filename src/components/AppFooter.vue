@@ -1,5 +1,4 @@
 <script>
-
 import AppEcommerce from './AppEcommerce.vue';
 
 export default {
@@ -113,7 +112,6 @@ export default {
             }
 
             ul {
-                list-style-type: none;
 
                 li {
                     color: #959595;
@@ -139,14 +137,12 @@ export default {
     position: relative;
 
     .sub-footer {
-        width: 70%;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
+        // this mixin will give display flex, justify-content: center and width 70% properties to the container
+        @include flex-container;
 
         .signup-btn {
             padding: 17px;
-            border: 2px solid #0282F9;
+            border: 2px solid $primaryColor;
             background-color: transparent;
             color: white;
             text-transform: uppercase;
@@ -159,7 +155,7 @@ export default {
 
             h4 {
                 font-size: 20px;
-                color: #0282F9;
+                color: $primaryColor;
                 text-transform: uppercase;
             }
 

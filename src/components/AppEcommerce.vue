@@ -56,13 +56,11 @@ export default {
     padding-bottom: 50px;
 
     ul {
-        display: flex;
-        width: 70%;
-        margin: auto;
-        gap: 50px;
-        justify-content: space-between;
-        align-items: center;
+        // this mixin will give display flex, justify-content: center and width 70% properties to the container
 
+        @include flex-container;
+        gap: 50px;
+        align-items: center;
         padding: 0 45px;
 
         li {
