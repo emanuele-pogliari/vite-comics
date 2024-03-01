@@ -45,6 +45,8 @@ header {
         align-items: center;
         gap: 20px;
         text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Barlow Condensed', sans-serif;
 
         li {
             padding-top: 50px;

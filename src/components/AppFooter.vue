@@ -4,17 +4,46 @@ import AppEcommerce from './AppEcommerce.vue';
 export default {
     data() {
         return {
-            list1: ["Characters", "Comics", "Movies", "Tv", "Games", "Videos", "News"],
-            list2: ["Shop DC", "Shop DC Collectibles"],
-            list3: ["Terms of use", "Privacy policy(New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"],
-            list4: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
+            linkList: [
+                {
+                    title: 'dc comics',
+                    links: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+                },
+                {
+                    title: 'shop',
+                    links: ['Shop DC', 'Shop DC Collectibles']
+                },
+                {
+                    title: 'dc',
+                    links: ['Terms of Use', 'Privacy Policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshop', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+                },
+                {
+                    title: 'sites',
+                    links: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+                },
+            ],
 
-            socialIcon: [
-                "/img/footer-facebook.png",
-                "/img/footer-twitter.png",
-                "/img/footer-youtube.png",
-                "/img/footer-pinterest.png",
-                "/img/footer-periscope.png"
+            socials: [
+                {
+                    name: 'facebook',
+                    icon: '/img/footer-facebook.png'
+                },
+                {
+                    name: 'twitter',
+                    icon: '/img/footer-twitter.png'
+                },
+                {
+                    name: 'youtube',
+                    icon: '/img/footer-youtube.png'
+                },
+                {
+                    name: 'pinterest',
+                    icon: '/img/footer-pinterest.png'
+                },
+                {
+                    name: 'periscope',
+                    icon: '/img/footer-periscope.png'
+                },
             ]
         }
     },
@@ -28,104 +57,88 @@ export default {
 
 <template>
     <AppEcommerce></AppEcommerce>
-    <div class="footer-container">
-        <div class="footer">
-            <div class="links">
-                <div class="links-first-col">
-                    <div class="links-list">
-                        <h3>Dc comics</h3>
-                        <ul>
-                            <li v-for="item of list1">{{ item }}</li>
-                        </ul>
-                    </div>
-                    <div class="links-list">
-                        <h3>Shop</h3>
-                        <ul>
-                            <li v-for="item of list2">{{ item }}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="links-second-col">
-                    <div class="links-list">
-                        <h3>DC</h3>
-                        <ul>
-                            <li v-for="item of list3">{{ item }}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="links-third-col">
-                    <div class="links-list">
-                        <h3>SITES</h3>
-                        <ul>
-                            <li v-for="item of list4">
-                                {{ item }}</li>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-container">
 
+                <div class="links">
+                    <div v-for="currentLinkList in linkList" class="links-list">
+                        <h3>{{ currentLinkList.title }}</h3>
+                        <ul>
+                            <li v-for="item in currentLinkList.links">{{ item }}</li>
                         </ul>
+                    </div>
+                </div>
+                <div class="logo-footer">
+                    <img src="/img/dc-logo-bg.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="subfooter-container">
+            <div class="sub-footer">
+                <button class="signup-btn">Sign-up Now!</button>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="social">
+                        <img v-for="social of socials" :src="social.icon" :alt="social.name">
                     </div>
                 </div>
             </div>
-            <img class="logo-footer" src="/img/dc-logo-bg.png" alt="">
         </div>
-    </div>
-    <div class="subfooter-container">
-        <div class="sub-footer">
-            <button class="signup-btn">Sign-up Now!</button>
-            <div class="follow">
-                <h4>Follow us</h4>
-                <div class="social">
-                    <img v-for="icon of socialIcon" :src="icon" alt="">
-
-                </div>
-            </div>
-        </div>
-    </div>
+    </footer>
 </template>
 
 <style lang="scss">
 @use '../src/styles/variables' as *;
 @use '../src/styles/mixins' as *;
 
-.footer-container {
-    background-color: #1c1c1c;
-    color: white;
-    margin: auto;
-    padding-top: 45px;
-    padding-bottom: 60px;
-    background-image: url(/img/footer-bg.jpg);
-    background-size: cover;
-    overflow: hidden;
+footer {
 
-    .footer {
-        position: relative;
-        width: 70%;
-        margin: auto;
+    .footer-top {
+        height: 370px;
+
+        background-image: url('/img/footer-bg.jpg');
+        background-position: cover;
+
+        overflow: hidden;
+
+
+
+        .footer-container {
+            @include flex-container;
+            align-items: center;
+            height: 100%;
+            padding: 20px 0;
+        }
 
         .links {
             display: flex;
+            flex-flow: column wrap;
+            align-content: flex-start;
+            gap: 20px 30px;
 
-            gap: 50px;
+            height: 100%;
+
+            padding: 20px 0;
 
             h3 {
-                font-size: 20px;
                 text-transform: uppercase;
-                padding-bottom: 20px;
+                font-size: 1.5em;
+                font-family: 'Barlow Condensed', sans-serif;
+                color: white;
+                margin-bottom: 10px;
             }
 
             ul {
 
-                li {
-                    color: #959595;
-                    padding-bottom: 5px;
-                }
+                color: #ccc;
+                font-size: .9em;
             }
         }
 
-        .logo-footer {
-            position: absolute;
-            transform: scale(1.2);
-            top: -70px;
-            right: 0;
-        }
     }
 
 }
@@ -133,7 +146,7 @@ export default {
 .subfooter-container {
     margin: auto;
     padding: 30px 0;
-    background-color: #1c1c1c;
+    background-color: #303030;
     position: relative;
 
     .sub-footer {
@@ -154,9 +167,10 @@ export default {
             gap: 20px;
 
             h4 {
-                font-size: 20px;
-                color: $primaryColor;
                 text-transform: uppercase;
+                font-size: 1.5em;
+                font-family: 'Barlow Condensed', sans-serif;
+                color: $primaryColor;
             }
 
             .social {

@@ -21,7 +21,7 @@ export default {
 @use '../src/styles/mixins' as *;
 
 .content-container {
-    background-color: #1C1C1C;
+    background-color: #303030;
     color: white;
 
     .content {
