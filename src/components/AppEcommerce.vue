@@ -59,9 +59,12 @@ export default {
     ul {
         // this mixin will give display flex, justify-content: center and width 70% properties to the container
 
-        @include flex-container;
+        display: flex;
+        justify-content: center;
         gap: 50px;
         align-items: center;
+        margin: auto;
+        width: 70%;
 
         padding: 0 45px;
 

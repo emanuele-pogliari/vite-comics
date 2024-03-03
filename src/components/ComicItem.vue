@@ -2,18 +2,17 @@
 export default {
     name: 'ComicItem',
 
-    props: {
-        thumb: String,
-        image: String,
-    },
+    props:{
+        comic: Object,
+    }
 }
 </script>
 
 
 <template>
     <div class="comic">
-        <img :src="image" alt="">
-        <h4>{{ thumb }}</h4>
+        <img :src="comic.thumb" :alt="comic.series">
+        <h4>{{ comic.series }}</h4>
     </div>
 </template>
 
