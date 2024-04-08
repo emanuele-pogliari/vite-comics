@@ -24,7 +24,7 @@ export default {
             <div class="current-series">Current Series</div>
         </div>
         <div class="content">
-            <ComicItem v-for="comic in comicsData" :comic="comic"></ComicItem>
+            <ComicItem v-for="currentComic in comicsData" :comic="currentComic"></ComicItem>
             <button class="load-btn">Load More</button>
         </div>
     </div>
